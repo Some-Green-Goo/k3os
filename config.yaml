@@ -1,0 +1,28 @@
+ssh_authorized_keys:
+- ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDAAfpE0fG5h5NjwRxhtFtV1pQPHFttiRI13G8DGEDrqCZJwtYXkVAqKIIleMwsi1v0AJxm4S4qQrlVI9OnPywTrS/rzK1pkpGCZAHGgwqUxGQkur1jzg9xbijRkM2BfyW9sY43/Mlg+J47AN9BOxQogGrluSNjROjbsjtgdjA0z53vqkOte97QiILnmCBrrWZG3L5VD9qLCQflzhYcOGFXliZcOnu+8QLx78HI5RJ8iNdKCnTRUGYd2iy1zpEbYtuIRd48+/204FGqS0kp9D9WU4Fkoaoxdf4v0Himd6o9kQn50+4fCINJ+dGr74JT2X37ZPoxG8pzV/6y5lY4q1ZIE7lIzsdGWyO0M3F0lR9/Lt8XqNLLl4YE3Ui3G77XPYXUZw/s2HOSsF1Z5m5mdsvYu+7EIYX8qB+WU97hzLXpJmtwjfu+iSZt5SARMyxe5jVDewiD3a7Jddx1heg3bYJ7l4Myy6FpNt8LIxOZn4o3dVZr5FUGB9ELTT8rs7K2fJM= ashton@Ashton-Ubuntu
+
+hostname: Master-4
+
+tls-san:
+- 192.16.8.0.177
+
+k3os:
+  dns_nameservers:
+  - 8.8.8.8
+  - 1.1.1.1
+  ntp_servers:
+  - 0.ca.pool.ntp.org
+  - 1.ca.pool.ntp.org
+
+  password: rancher
+
+  taints:
+  - key1=value1:NoSchedule
+  - key1=value1:NoExecute
+
+  tls-san:
+  - 192.168.0.177
+  
+  k3s_args:
+  - server
+  
